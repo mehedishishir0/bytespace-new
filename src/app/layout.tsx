@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "./components/home/Navbar";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -22,7 +21,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", satoshi.variable, clashDisplay.variable, poppins.variable, "font-sans", geist.variable)}
+      className={cn("h-full", "antialiased", satoshi.variable, clashDisplay.variable, poppins.variable, "font-sans")}
     >
       <body className="h-full min-h-full w-ful ">
         <Navbar />

@@ -1,11 +1,10 @@
-import Navbar from "../Navbar";
+
 import HeroContent from "./HeroContent";
 import HeroVisual from "./HeroVisual";
 
 const Hero = () => {
   return (
-    <section className="relative h-[850px] w-full overflow-hidden bg-[#073BE5] pt-[100px] md:pt-[80px]">
-    
+    <section className="relative h-[750px] md:h-[900px] w-full overflow-hidden bg-[#073BE5] pt-[140px] md:pt-[140px]">
       {/* Grid Background */}
       <div
         className="absolute inset-0 opacity-[0.15]"
@@ -19,7 +18,7 @@ const Hero = () => {
       />
 
       {/* Main Content */}
-      <div className=" z-10 mx-auto h-full flex flex-col items-center justify-start">
+      <div className=" z-10 mx-auto h-full  flex flex-col items-center justify-start">
         <HeroContent />
         <HeroVisual />
       </div>
