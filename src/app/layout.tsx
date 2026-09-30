@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Geist } from "next/font/google";
+import { satoshi, clashDisplay } from "./fonts";
 import "./globals.css";
+import Navbar from "@/components/home/Navbar";
+import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+import SmoothScroll from "@/components/shared/SmoothScroll";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-poppins-var",
 });
 
 export const metadata: Metadata = {
@@ -21,9 +23,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", satoshi.variable, clashDisplay.variable, poppins.variable, "font-sans")}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="h-full min-h-full w-ful ">
+        <SmoothScroll>
+          <Navbar />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
