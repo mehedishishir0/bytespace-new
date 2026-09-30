@@ -19,7 +19,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: "easeOut" as const },
   },
 };
 
@@ -29,7 +29,7 @@ const HeroContent = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="  mx-auto flex w-full flex-col items-center px-4 text-center"
+      className="relative z-50 mx-auto flex w-full flex-col items-center px-4 text-center"
     >
       {/* Heading */}
       <motion.h1
@@ -63,7 +63,7 @@ const HeroContent = () => {
           />
         </div>
 
-        <button className="rounded-full bg-[#D6FF00] px-7 py-2.5 text-[13px] font-semibold text-black transition hover:bg-[#c9f000]">
+        <button className="rounded-full bg-brand-accent px-7 py-2.5 text-[13px] font-semibold text-black transition hover:bg-brand-accent/90">
           Search
         </button>
       </motion.div>

@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Poppins, Geist } from "next/font/google";
 import { satoshi, clashDisplay } from "./fonts";
 import "./globals.css";
-import Navbar from "./components/home/Navbar";
+import Navbar from "@/components/home/Navbar";
 import { cn } from "@/lib/utils";
 
+
+import SmoothScroll from "@/components/shared/SmoothScroll";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
@@ -24,8 +26,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", satoshi.variable, clashDisplay.variable, poppins.variable, "font-sans")}
     >
       <body className="h-full min-h-full w-ful ">
-        <Navbar />
-        {children}
+        <SmoothScroll>
+          <Navbar />
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

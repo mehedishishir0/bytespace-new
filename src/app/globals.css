@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-brand: #003BE2;
+  --color-brand-accent: #CBFC01;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-satoshi);

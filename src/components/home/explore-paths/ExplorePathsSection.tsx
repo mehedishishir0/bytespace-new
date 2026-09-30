@@ -54,7 +54,7 @@ const ExplorePathsSection = () => {
         
         {/* Header Section */}
         <div className="text-center mx-auto mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-2xl font-poppins sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
             Explore Diverse Learning Paths at Bytespace
           </h2>
           <p className="mt-3 text-xs  max-w-3xl mx-auto sm:text-sm text-gray-500 leading-relaxed">
@@ -70,7 +70,7 @@ const ExplorePathsSection = () => {
               className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer h-44"
             >
               {/* Neon Lime Circle with Icon */}
-              <div className="w-14 h-14 rounded-full bg-[#d4fd36] flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+              <div className="w-14 h-14 rounded-full bg-brand-accent flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
                 {path.icon}
               </div>
 

@@ -4,7 +4,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import FloatingCard from "./FloatingCard";
 
-const floatAnimation = (delay = 0, yOffset = 15, duration = 3) => ({
+import type { TargetAndTransition } from "framer-motion";
+
+const floatAnimation = (delay = 0, yOffset = 15, duration = 3): TargetAndTransition => ({
   y: [0, -yOffset, 0],
   transition: {
     duration: duration,
@@ -60,7 +62,7 @@ const HeroVisual = () => {
         initial={{ scale: 0.8, opacity: 0, y: 50 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute bottom-0 left-1/2 z-0 h-[280px] w-[560px] -translate-x-1/2 rounded-t-full bg-[#CBFC01] md:h-[350px] md:w-[700px] lg:h-[450px] lg:w-[900px]"
+        className="absolute bottom-0 left-1/2 z-0 h-[280px] w-[560px] -translate-x-1/2 rounded-t-full bg-brand-accent md:h-[350px] md:w-[700px] lg:h-[450px] lg:w-[900px]"
       ></motion.div>
 
       <motion.div
