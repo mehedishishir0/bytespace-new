@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import HappyStudentsCard from "../../shared/HappyStudentsCard";
 import LearningProgressCard from "../../shared/LearningProgressCard";
 
@@ -8,6 +9,23 @@ type FloatingCardProps = {
   type: "uiux" | "progress" | "students";
   className?: string;
   delay?: number;
+};
+
+const Counter = ({ to, duration, suffix = "" }: { to: number; duration: number; suffix?: string }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+  const display = useTransform(rounded, (latest) => `${latest}${suffix}`);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, to, { duration, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [isInView, count, to, duration]);
+
+  return <motion.span ref={ref}>{display}</motion.span>;
 };
 
 const FloatingCard = ({
@@ -21,8 +39,6 @@ const FloatingCard = ({
     transition: { type: "spring" as const, stiffness: 260, damping: 20, delay: delay },
   };
 
-
-
   if (type === "uiux") {
     return (
       <motion.div
@@ -33,9 +49,9 @@ const FloatingCard = ({
           UI/UX Design
         </p>
 
-        <div className="mt-2 flex  gap-1 text-[10px] text-gray-500">
-          <span>200 Courses</span>
-          <span>1000+ Students</span>
+        <div className="mt-2 flex gap-2 text-[10px] text-gray-500">
+          <Counter to={200} duration={2} suffix=" Courses" />
+          <Counter to={1000} duration={2.5} suffix="+ Students" />
         </div>
       </motion.div>
     );

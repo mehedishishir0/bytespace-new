@@ -11,12 +11,14 @@ import ScrollReveal from "@/components/shared/ScrollReveal";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      <Hero />
-      <ScrollReveal>
-        <Brand />
-      </ScrollReveal>
-      
+    <div className="overflow-hidden space-y-16">
+      <div>
+        <Hero />
+        <ScrollReveal>
+          <Brand />
+        </ScrollReveal>
+      </div>
+
       <ScrollReveal delay={0.1}>
         <CoursesSection />
       </ScrollReveal>
