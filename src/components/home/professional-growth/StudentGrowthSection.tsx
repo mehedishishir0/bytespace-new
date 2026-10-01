@@ -2,10 +2,11 @@ import Image from "next/image";
 import LearningProgressCard from "../../shared/LearningProgressCard";
 import SharedCourseCard from "../../shared/SharedCourseCard";
 import { courses } from "@/data/mockData";
+import Counter from "../../shared/Counter";
 
 export default function StudentGrowthSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white  pb-4 lg:pb-10">
+    <section className="relative w-full overflow-hidden bg-white">
       {/* Radial Gradient background */}
       <div
         className="absolute top-0 left-1/2 lg:left-1/5 w-[500px] lg:w-[800px] h-[500px] lg:h-[700px] -translate-x-1/2 lg:-translate-x-1/2 -translate-y-1/4 rounded-full pointer-events-none"
@@ -35,15 +36,21 @@ export default function StudentGrowthSection() {
             {/* Stats Row */}
             <div className="flex items-center justify-center lg:justify-start gap-8 sm:gap-14 pt-4">
               <div className="flex flex-col items-start">
-                <h3 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-brand leading-none mb-1">12K</h3>
+                <h3 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-brand leading-none mb-1">
+                  <Counter to={12} suffix="K" duration={2} />
+                </h3>
                 <p className="text-[12px] lg:text-[13px] text-gray-500 font-medium">Students</p>
               </div>
               <div className="flex flex-col items-start">
-                <h3 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-brand leading-none mb-1">70+</h3>
+                <h3 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-brand leading-none mb-1">
+                  <Counter to={70} suffix="+" duration={2} />
+                </h3>
                 <p className="text-[12px] lg:text-[13px] text-gray-500 font-medium">Courses</p>
               </div>
               <div className="flex flex-col items-start">
-                <h3 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-brand leading-none mb-1">16</h3>
+                <h3 className="text-[28px] sm:text-[34px] lg:text-[40px] font-bold text-brand leading-none mb-1">
+                  <Counter to={16} duration={2} />
+                </h3>
                 <p className="text-[12px] lg:text-[13px] text-gray-500 font-medium">Creators</p>
               </div>
             </div>

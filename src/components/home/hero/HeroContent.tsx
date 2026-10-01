@@ -63,7 +63,7 @@ const HeroContent = () => {
           />
         </div>
 
-        <button className="rounded-full bg-brand-accent px-7 py-2.5 text-[13px] font-semibold text-black transition hover:bg-brand-accent/90">
+        <button className="rounded-full cursor-pointer bg-brand-accent px-7 py-2.5 text-[13px] font-semibold text-black transition hover:bg-brand-accent/90">
           Search
         </button>
       </motion.div>

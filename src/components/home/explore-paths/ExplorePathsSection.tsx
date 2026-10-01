@@ -49,7 +49,7 @@ const learningPaths: LearningPath[] = [
 
 const ExplorePathsSection = () => {
   return (
-    <section className="w-full py-16 bg-white">
+    <section className="w-full  bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         
         {/* Header Section */}

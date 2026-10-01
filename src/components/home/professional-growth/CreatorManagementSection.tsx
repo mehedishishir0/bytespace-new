@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { MdCheckCircle } from "react-icons/md";
 import HappyStudentsCard from "../../shared/HappyStudentsCard";
+import Counter from "../../shared/Counter";
+import ProgressBar from "../../shared/ProgressBar";
 
 export default function CreatorManagementSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-white pt-4 lg:pt-10 pb-12 lg:pb-28">
+    <section className="relative w-full overflow-hidden bg-white ">
       {/* Radial Gradient background */}
       <div 
         className="absolute right-0 bottom-0 lg:top-60 w-[400px] lg:w-[500px] h-[400px] lg:h-[500px] pointer-events-none rounded-full"
@@ -48,17 +50,19 @@ export default function CreatorManagementSection() {
               <div className="absolute top-6 sm:top-10 lg:top-16 -left-2 sm:-left-6 lg:-left-6 bg-brand text-white p-4 lg:p-6 rounded-[20px] lg:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] w-[180px] sm:w-[220px] lg:w-[240px] z-30">
                 <p className="text-[10px] lg:text-[13px] text-white/90 font-medium">Total Revenue</p>
                 <p className="text-[8px] lg:text-[10px] text-white/70 mb-2 lg:mb-4 mt-0.5">July 1-28</p>
-                <h4 className="text-[22px] lg:text-[32px] font-bold mt-1 mb-3 lg:mb-5 leading-none">$120.29</h4>
-                <div className="w-full bg-brand/90 h-1.5 lg:h-2.5 rounded-full overflow-hidden">
-                  <div className="bg-brand-accent h-full w-[65%] rounded-full"></div>
-                </div>
+                <h4 className="text-[22px] lg:text-[32px] font-bold mt-1 mb-3 lg:mb-5 leading-none">
+                  <Counter to={120.29} prefix="$" decimals={2} duration={2} />
+                </h4>
+                <ProgressBar width="65%" />
               </div>
 
               {/* Year to Date Card (Middle Left) */}
               <div className="absolute top-[180px] sm:top-[220px] lg:top-[280px] -left-4 sm:-left-10 lg:-left-20 bg-brand p-3 lg:p-5 rounded-[16px] lg:rounded-[28px] shadow-[0_20px_50px_rgba(0,0,0,0.15)] w-[140px] sm:w-[160px] lg:w-[180px] z-30">
                 <p className="text-[10px] lg:text-[13px] text-white/90 font-medium">Year to Date</p>
                 <p className="text-[8px] lg:text-[10px] text-white/70 mb-2 lg:mb-3 mt-0.5">2023</p>
-                <h4 className="text-[18px] lg:text-[26px] font-bold text-white mb-2 lg:mb-4 leading-none">$1,200.38</h4>
+                <h4 className="text-[18px] lg:text-[26px] font-bold text-white mb-2 lg:mb-4 leading-none">
+                  <Counter to={1200.38} prefix="$" decimals={2} duration={2} />
+                </h4>
                 <span className="inline-block bg-brand-accent text-gray-900 text-[8px] lg:text-[10px] font-bold px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full">
                   +12%
                 </span>
