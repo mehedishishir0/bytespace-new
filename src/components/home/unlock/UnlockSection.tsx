@@ -24,7 +24,7 @@ const decorativeShapes = [
   {
     id: 3,
     containerClass: "hidden sm:block absolute bottom-10 lg:bottom-20 -left-6 lg:-left-7 w-[120px] lg:w-[180px] h-[120px] lg:h-[180px] z-10",
-    src: "/images/unlock/bottom-left-white-cone.png",
+    src: "/images/unlock/Bottom-Left-White-Cone.png",
     alt: "White cone decoration",
     width: 200,
     height: 200,
@@ -33,7 +33,7 @@ const decorativeShapes = [
   {
     id: 4,
     containerClass: "hidden sm:block absolute -bottom-10 lg:-bottom-16 left-[20%] lg:left-[22%] w-[140px] lg:w-[220px] h-[140px] lg:h-[220px] z-10",
-    src: "/images/unlock/bottom-left-green-ring.png",
+    src: "/images/unlock/Bottom-Left-Green-Ring.png",
     alt: "Green ring decoration",
     width: 220,
     height: 220,
@@ -42,7 +42,7 @@ const decorativeShapes = [
   {
     id: 5,
     containerClass: "hidden sm:block absolute top-8 lg:top-12 right-[15%] lg:right-[20%] w-[90px] lg:w-[140px] h-[90px] lg:h-[140px] z-10",
-    src: "/images/unlock/top-right-green-pyramid.png",
+    src: "/images/unlock/Top-Right-Green-Pyramid.png",
     alt: "Green pyramid decoration",
     width: 140,
     height: 140,
